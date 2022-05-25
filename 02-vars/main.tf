@@ -17,5 +17,5 @@ provider "aci" {
 # Define desired ACI tenant
 resource "aci_tenant" "terraform_tenant" {
     name        = var.tenant
-    description = "Tenant-2 for TF demo with PCUG"
+    description = "DEVWKS1285 Demo Tenant"
 }

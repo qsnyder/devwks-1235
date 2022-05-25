@@ -8,14 +8,14 @@ terraform {
 
 # Configure the provider with your Cisco APIC credentials.
 provider "aci" {
-  username = var.user.username
-  password = var.user.password
-  url      = var.user.url
+  username = "admin"
+  password = "!v3G@!4@Y"
+  url      = "https://sandboxapicdc.cisco.com"
   insecure = true
 }
 
 # Define desired ACI tenant
 resource "aci_tenant" "terraform_tenant" {
-    name        = "PCUG-ACI-Tenant-1"
-    description = "Tenant-1 for TF demo with PCUG"
+    name        = "[INSERT TENANT NAME]"
+    description = "DEVWKS1285 Demo Tenant"
 }

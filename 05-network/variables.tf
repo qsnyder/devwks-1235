@@ -3,23 +3,23 @@ variable "user" {
   type        = map
   default     = {
     username = "admin"
-    password = "C1sco12345"
-    url      = "https://10.10.20.14"
+    password = "!v3G@!4@Y"
+    url      = "https://sandboxapicdc.cisco.com"
   }
 }
 variable "tenant" {
     type    = string
-    default = "PCUG-ACI-Tenant-5"
+    default = "[INSERT TENANT NAME]"
 }
 variable "vrf" {
     type    = string
-    default = "PCUG-5_VRF"
+    default = "[INSERT VRF NAME]"
 }
 variable "bd" {
     type    = string
-    default = "PCUG-5_BD"
+    default = "[INSERT BD NAME]"
 }
 variable "subnet" {
     type    = string
-    default = "10.10.103.1/24"
+    default = "[INSERT SUBNET VALUE]"
 }
