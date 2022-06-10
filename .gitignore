@@ -1,5 +1,5 @@
 # Ignore the mac .DS_Store
-.DS_Store
+**/.DS_Store
 
 # Local .terraform directories
 **/.terraform/*
