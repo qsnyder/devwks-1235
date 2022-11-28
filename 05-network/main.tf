@@ -17,13 +17,13 @@ provider "aci" {
 # Define desired ACI tenant
 resource "aci_tenant" "terraform_tenant" {
     name        = var.tenant
-    description = "DEVWKS-1235 Demo Tenant"
+    description = "DEVWKS1235 Demo Tenant"
 }
 
 # Tenant VRF (CTX)
 resource "aci_vrf" "terraform_vrf" {
     tenant_dn   = aci_tenant.terraform_tenant.id
-    description = "DEVWKS-1235 Demo VRF"
+    description = "DEVWKS1235 Demo VRF"
     name        = var.vrf
 }
 
@@ -31,13 +31,13 @@ resource "aci_vrf" "terraform_vrf" {
 resource "aci_bridge_domain" "terraform_bd" {
     tenant_dn          = aci_tenant.terraform_tenant.id
     relation_fv_rs_ctx = aci_vrf.terraform_vrf.id
-    description        = "DEVWKS-1235 Demo BD"
+    description        = "DEVWKS1235 Demo BD"
     name               = var.bd
 }
 
 # Tenant BD's subnet
 resource "aci_subnet" "terraform_bd_subnet" {
     parent_dn   = aci_bridge_domain.terraform_bd.id
-    description = "DEVWKS-1235 Demo Subnet"
+    description = "DEVWKS1235 Demo Subnet"
     ip          = var.subnet
 }
